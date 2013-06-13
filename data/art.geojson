@@ -1,0 +1,38 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [40.713351, -74.012127]},
+			"properties": {
+				"Artist": "Jenny Holzer",
+				"Title": "For 7 World Trade"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [40.713175,-74.011502]},
+			"properties": {
+				"Artist": "Jeff Koons",
+				"Title": "Balloon Flower (Red)"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [40.714722,-74.014444]},
+			"properties": {
+				"Artist": "Julie Mehretu",
+				"Title": "Mural"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [40.706051,-74.008176]},
+			"properties": {
+				"Artist": "John Baldessari",
+				"Title": "Tiger (Orange) and Trainer: With Three Figures (Red, Yellow, Blue)"
+			}
+		}
+	]
+}
+
