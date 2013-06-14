@@ -18,6 +18,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.011502, 40.713175]},
 				"properties": {
+					"marker-color": "#3498db",
 					"Location": "Silverstein Family Park",
 					"Artist": "Jeff Koons",
 					"Title": "Balloon Flower (Red)"
@@ -27,6 +28,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.014444, 40.714722]},
 				"properties": {
+					"marker-color": "#2980b9",
 					"Location": "Goldman Sachs Building",
 					"Address": "200 West Street",
 					"Artist": "Julie Mehretu",
@@ -38,6 +40,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.008176, 40.706051]},
 				"properties": {
+					"marker-color": "#2980b9",
 					"Location": "Deutche Bank Building",
 					"Address": "60 Wall Street",
 					"Artist": "John Baldessari",
@@ -65,6 +68,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
 				"properties": {
+					"marker-color": "#3498db",
 					"Location": "IBM Building",
 					"Address": "590 Madison Avenue",
 					"Artist": "Alexander Calder",
@@ -75,6 +79,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.980189, 40.753672]},
 				"properties": {
+					"marker-color": "#2980b9",
 					"Address": "505 Fifth Avenue",
 					"Artist": "James Turrell",
 					"Title": "Light Box"
@@ -84,6 +89,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.989016, 40.756019]},
 				"properties": {
+					"marker-color": "#2980b9",
 					"Location": "New York Times Building",
 					"Address": "242 W 41st Street",
 					"Artist": "Ben Rubin",
