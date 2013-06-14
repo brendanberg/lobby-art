@@ -14,16 +14,21 @@ While I try to document everything I can, there's no way one person can find eve
 I will gladly review any submissions of works to include, but I intend to keep the official fork tightly curated.
 
 All documented locations are geoJSON features using the format described below.
-Each location should include in its properties dictionary "Location", "Artist", and "Title" information.
+Each location should include additional metadata in the properties dictionary.
 
     {
       "type": "Feature",
       "geometry": {"type": "Point", "coordinates": [<LNG>, <LAT>]},
       "properties": {
-        "Location": "<BUILDING-NAME> (<BUILDING-ADDRESS>)",
+        "Location": "<BUILDING-NAME>",
+        "Address": "<BUILDING-ADDRESS>",
         "Artist": "<ARTIST-NAME>",
-        "Title": "<WORK-TITLE>"
+        "Title": "<WORK-TITLE>",
+        "Image": "<WORK-IMAGE-URL>"
       }
     }
+
+At a minimum, the metadata requires either a location or an address, the artist's name, and the title of the work.
+Additionally, the URL for a Creative-Commons licensed image may be included.
 
 To submit additional points of interest, fork the project, add data points, and submit a pull request.
