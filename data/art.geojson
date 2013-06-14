@@ -7,7 +7,8 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.012127, 40.713351]},
 				"properties": {
-					"Location": "7 World Trade Center (250 Greenwich Street)",
+					"Location": "7 World Trade Center",
+					"Address": "250 Greenwich Street",
 					"Artist": "Jenny Holzer",
 					"Title": "For 7 World Trade"
 				}
@@ -25,7 +26,8 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.014444, 40.714722]},
 				"properties": {
-					"Location": "Goldman Sachs Building (200 West Street)",
+					"Location": "Goldman Sachs Building",
+					"Address": "200 West Street",
 					"Artist": "Julie Mehretu",
 					"Title": "Mural"
 				}
@@ -34,7 +36,8 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.008176, 40.706051]},
 				"properties": {
-					"Location": "Deutche Bank Building (60 Wall Street)",
+					"Location": "Deutche Bank Building",
+					"Address": "60 Wall Street",
 					"Artist": "John Baldessari",
 					"Title": "Tiger (Orange) and Trainer: With Three Figures (Red, Yellow, Blue)"
 				}
@@ -49,7 +52,8 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
 				"properties": {
-					"Location": "IBM Building (590 Madison Avenue)",
+					"Location": "IBM Building",
+					"Address": "590 Madison Avenue",
 					"Artist": "Alexander Calder",
 					"Title": "Saurien"
 				}
@@ -58,7 +62,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.980189, 40.753672]},
 				"properties": {
-					"Location": "505 Fifth Avenue",
+					"Address": "505 Fifth Avenue",
 					"Artist": "James Turrell",
 					"Title": "Light Box"
 				}
@@ -67,7 +71,8 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.989016, 40.756019]},
 				"properties": {
-					"Location": "New York Times Building (242 W 41st Street)",
+					"Location": "New York Times Building",
+					"Address": "242 W 41st Street",
 					"Artist": "Ben Rubin",
 					"Title": "Movable Type"
 				}
