@@ -42,6 +42,16 @@
 					"Artist": "John Baldessari",
 					"Title": "Tiger (Orange) and Trainer: With Three Figures (Red, Yellow, Blue)"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": []},
+				"properties": {
+					"Location": "Jacob K. Javits Federal Building",
+					"Address": "26 Federal Plaza",
+					"Artist": "Sol LeWitt",
+					"Title": "Wall Drawing 746"
+				}
 			}
 		]
 	},
