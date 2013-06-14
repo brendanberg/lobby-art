@@ -45,7 +45,7 @@
 			},
 			{
 				"type": "Feature",
-				"geometry": {"type": "Point", "coordinates": []},
+				"geometry": {"type": "Point", "coordinates": [-74.00425349, 40.7155260]},
 				"properties": {
 					"Location": "Jacob K. Javits Federal Building",
 					"Address": "26 Federal Plaza",
