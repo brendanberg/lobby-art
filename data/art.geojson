@@ -1,42 +1,78 @@
-{
-	"type": "FeatureCollection",
-	"features": [
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.012127, 40.713351]},
-			"properties": {
-				"Location": "7 World Trade Center (250 Greenwich Street)",
-				"Artist": "Jenny Holzer",
-				"Title": "For 7 World Trade"
+[
+	{
+		"type": "FeatureCollection",
+		"name": "Lower Manhattan",
+		"features": [
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.012127, 40.713351]},
+				"properties": {
+					"Location": "7 World Trade Center (250 Greenwich Street)",
+					"Artist": "Jenny Holzer",
+					"Title": "For 7 World Trade"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.011502, 40.713175]},
+				"properties": {
+					"Location": "Silverstein Family Park",
+					"Artist": "Jeff Koons",
+					"Title": "Balloon Flower (Red)"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.014444, 40.714722]},
+				"properties": {
+					"Location": "Goldman Sachs Building (200 West Street)",
+					"Artist": "Julie Mehretu",
+					"Title": "Mural"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.008176, 40.706051]},
+				"properties": {
+					"Location": "Deutche Bank Building (60 Wall Street)",
+					"Artist": "John Baldessari",
+					"Title": "Tiger (Orange) and Trainer: With Three Figures (Red, Yellow, Blue)"
+				}
 			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.011502, 40.713175]},
-			"properties": {
-				"Location": "Silverstein Family Park",
-				"Artist": "Jeff Koons",
-				"Title": "Balloon Flower (Red)"
+		]
+	},
+	{
+		"type": "FeatureCollection",
+		"name": "Midtown",
+		"features": [
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
+				"properties": {
+					"Location": "IBM Building (590 Madison Avenue)",
+					"Artist": "Alexander Calder",
+					"Title": "Saurien"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-73.980189, 40.753672]},
+				"properties": {
+					"Location": "505 Fifth Avenue",
+					"Artist": "James Turrell",
+					"Title": "Light Box"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-73.989016, 40.756019]},
+				"properties": {
+					"Location": "New York Times Building (242 W 41st Street)",
+					"Artist": "Ben Rubin",
+					"Title": "Movable Type"
+				}
 			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.014444, 40.714722]},
-			"properties": {
-				"Location": "Goldman Sachs Building (200 West Street)",
-				"Artist": "Julie Mehretu",
-				"Title": "Mural"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.008176, 40.706051]},
-			"properties": {
-				"Location": "Deutche Bank Building (60 Wall Street)",
-				"Artist": "John Baldessari",
-				"Title": "Tiger (Orange) and Trainer: With Three Figures (Red, Yellow, Blue)"
-			}
-		}
-	]
-}
+		]
+	}
+]
 
