@@ -6,12 +6,13 @@ var map = L.map('map');
 
 $.ajax({
 	url: 'https://api.github.com/repos/brendanberg/lobby-art/contents/data/art.geojson?ref=master',
+	accepts: 'application/vnd.github.VERSION.raw',
 	//url: 'https://github.com/brendanberg/lobby-art/blob/master/data/art.geojson',
 	dataType: 'json',
 	type: 'GET'
 }).then(
 	function(response, status, jqXHR) {
-		var geoData = b64_to_utf8(response['content']);
+		console.log(response['content']);
 
 		L.geoJson(geoData, {
 			style: function (feature) {
