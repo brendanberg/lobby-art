@@ -3,6 +3,11 @@ function b64_to_utf8(str) {
 }
 
 var map = L.mapbox.map('map', 'brendanberg.map-3c5zsf9m').setView([40.738, -73.989], 13);
+var markerStyle = {
+	'marker-size': 'medium',
+	'marker-color': '#438fd3',
+	'marker-symbol': null
+};
 
 $.ajax({
 	url: 'https://api.github.com/repos/brendanberg/lobby-art/contents/data/art.geojson?ref=master',
@@ -18,7 +23,21 @@ $.ajax({
 				return {color: feature.properties['marker-color']};
 			},
 			onEachFeature: function (feature, layer) {
-				var properties = feature.properties, popupContent;
+				var properties = feature.properties, popupContent, style, styleProps = {};
+
+				if (layer instanceof L.Marker) {
+					for (style in markerStyle) {
+						if (style in properties) {
+							styleProps[style] = properties[style];
+						} else {
+							styleProps[style] = markerStyle[style];
+						}
+					}
+					layer.setIcon(L.mapbox.marker.icon(styleProps));
+				}
+
+				// TODO: Use a template for this and pull additional metadata into a table
+				// to be displayed in a 'More Info' tab.
 
 				if ('Location' in properties && 'Address' in properties) {
 					popupContent = '<p><span class="title">' + properties['Location'] + '</span><br>' + properties['Address'] + '</p>';
