@@ -19,3 +19,11 @@ body {
 	padding: 20px;
 }
 
+.leaflet-popup-content {
+	font: 12pt "HelveticaNeue-Light";
+}
+
+.leaflet-popup-content .title {
+	font-size: 20pt;
+}
+

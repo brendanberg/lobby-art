@@ -21,11 +21,11 @@ $.ajax({
 				var properties = feature.properties, popupContent;
 
 				if ('Location' in properties && 'Address' in properties) {
-					popupContent = '<p><h2>' + properties['Location'] + '</h2><br>' + properties['Address'] + '</p>';
+					popupContent = '<p><span class="title">' + properties['Location'] + '</span><br>' + properties['Address'] + '</p>';
 				} else if ('Location' in properties) {
-					popupContent = '<p><h2>' + properties['Location'] + '</h2></p>';
+					popupContent = '<p><span class="title">' + properties['Location'] + '</span></p>';
 				} else if ('Address' in properties) {
-					popupContent = '<p><h2>' + properties['Address'] + '</h2></p>';
+					popupContent = '<p><span class="title">' + properties['Address'] + '</span></p>';
 				}
 
 				if ('Image' in properties) {
