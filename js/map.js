@@ -2,12 +2,7 @@ function b64_to_utf8( str ) {
     return decodeURIComponent(window.atob( str ));
 }
 
-var map = L.map('map');
-
-L.tileLayer('http://{s}.tiles.mapbox.com/v3/brendanberg.map-3c5zsf9m/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	minZoom: 10
-}).addTo(map);
+var map = L.mapbox.map('map', 'brendanberg.map-3c5zsf9m').setView([40.738, -73.989], 13);
 
 $.ajax({
 	url: 'https://api.github.com/repos/brendanberg/lobby-art/contents/data/art.geojson?ref=master',
