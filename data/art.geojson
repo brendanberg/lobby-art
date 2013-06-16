@@ -57,6 +57,38 @@
 					"Artist": "Sol LeWitt",
 					"Title": "Wall Drawing 746"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.011191, 40.709288]},
+				"properties": {
+					"marker-color": "#3498db",
+					"Location": "Zucotti Park",
+					"Artist": "Mark di Suvero",
+					"Title": "Joie de Vivre"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.008954, 40.707503]},
+				"properties": {
+					"marker-color": "#3498db",
+					"Location": "Chase Manhattan Plaza",
+					"Artist": "Jean Dubuffet",
+					"Title": "Group of Four Trees",
+					"Commisioned by": "David Rockefeller"
+				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.010472, 40.70893]},
+				"properties": {
+					"marker-color": "#3498db",
+					"Location": "Brown Brothers Harriman Building",
+					"Address": "140 Broadway",
+					"Artist": "Isamu Noguchi",
+					"Title": "Red Cube",
+				}
 			}
 		]
 	},
