@@ -18,15 +18,18 @@ $.ajax({
 				return {color: feature.properties['marker-color']};
 			},
 			onEachFeature: function (feature, layer) {
-				var properties = feature.properties;
-				var popupContent = '<h2>' + properties['Location'] + '</h2>';
+				var properties = feature.properties, popupContent;
 
-				if ('Address' in properties) {
-					popupContent += '<p>' + properties['Address'] + '</p>';
+				if ('Location' in properties and 'Address' in properties) {
+					popupContent = '<p><h2>' + properties['Location'] + '</h2><br>' + properties['Address'] + '</p>';
+				} else if ('Location' in properties) {
+					popupContent = '<p><h2>' + properties['Location'] + '</h2></p>';
+				} else if ('Address' in properties) {
+					popupContent = '<p><h2>' + properties['Address'] + '</h2></p>';
 				}
 
 				if ('Image' in properties) {
-					popupContent += '<img src="' + properties['Image'] + '">';
+					popupContent += '<img src="' + properties['Image'] + '" width="100%">';
 				}
 
 				popupContent += '<p><strong>' + properties['Artist'] + '</strong><br>' +
