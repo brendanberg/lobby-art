@@ -89,6 +89,17 @@
 					"Artist": "Isamu Noguchi",
 					"Title": "Red Cube"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.004315, 40.707016]},
+				"properties": {
+					"marker-color": "#2980b9",
+					"Location": "One Seaport Plaza",
+					"Address": "199 Water Street",
+					"Artist": "Frank Stella",
+					"Title": "Sinjerli I, Basra Gate II, and Damascus Gate II"
+				}
 			}
 		]
 	},
