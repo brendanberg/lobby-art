@@ -6,7 +6,8 @@ $.ajax({
 	dataType: 'json',
 	type: 'GET'
 }).then(
-	function(geoData, status, jqXHR) {
+	function(response, status, jqXHR) {
+		var geoData = atob(response['content']);
 		console.log(geoData);
 
 		L.geoJson(geoData, {
