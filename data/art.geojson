@@ -100,6 +100,16 @@
 					"Artist": "Frank Stella",
 					"Title": "Sinjerli I, Basra Gate II, and Damascus Gate II"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.007298, 40.719257]},
+				"properties": {
+					"marker-color": "#2980b9",
+					"Address": "140 Franklin Street",
+					"Artist": "Sol LeWitt",
+					"Title": "Wall Drawing ???"
+				}
 			}
 		]
 	},
