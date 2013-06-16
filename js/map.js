@@ -15,7 +15,7 @@ $.ajax({
 
 		L.geoJson(geoData, {
 			style: function (feature) {
-				return {color: feature.properties.marker-color};
+				return {color: feature.properties['marker-color']};
 			},
 			onEachFeature: function (feature, layer) {
 				var properties = feature.properties;
