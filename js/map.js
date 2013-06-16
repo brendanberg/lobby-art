@@ -10,7 +10,8 @@ $.ajax({
 	type: 'GET'
 }).then(
 	function(response, status, jqXHR) {
-		var geoData = b64_to_utf8(response.content.replace(/\n/g, ''));
+		var decoded = b64_to_utf8(response.content.replace(/\n/g, '')),
+			geoData = JSON.parse(decoded);
 		console.log(geoData);
 
 		L.geoJson(geoData, {
