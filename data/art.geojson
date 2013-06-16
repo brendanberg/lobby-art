@@ -105,6 +105,36 @@
 	},
 	{
 		"type": "FeatureCollection",
+		"name": "SoHo",
+		"features": []
+	},
+	{
+		"type": "FeatureCollection",
+		"name": "Lower East Side and Chinatown",
+		"features": []
+	},
+	{
+		"type": "FeatureCollection",
+		"name": "Greenwich Village",
+		"features": []
+	},
+	{
+		"type": "FeatureCollection",
+		"name": "Chelsea",
+		"features": []
+	},
+	{
+		"type": "FeatureCollection",
+		"name": "Upper West Side",
+		"features": []
+	},
+	{
+		"type": "FeatureCollection",
+		"name": "Upper East Side",
+		"features": []
+	},
+	{
+		"type": "FeatureCollection",
 		"name": "Midtown",
 		"features": [
 			{
