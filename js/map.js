@@ -20,7 +20,7 @@ $.ajax({
 			onEachFeature: function (feature, layer) {
 				var properties = feature.properties, popupContent;
 
-				if ('Location' in properties and 'Address' in properties) {
+				if ('Location' in properties && 'Address' in properties) {
 					popupContent = '<p><h2>' + properties['Location'] + '</h2><br>' + properties['Address'] + '</p>';
 				} else if ('Location' in properties) {
 					popupContent = '<p><h2>' + properties['Location'] + '</h2></p>';
