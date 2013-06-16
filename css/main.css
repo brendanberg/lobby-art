@@ -10,3 +10,11 @@ body {
 	height: 100%;
 }
 
+#nav {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	color: #FFF;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
