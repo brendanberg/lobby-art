@@ -22,7 +22,7 @@ $.ajax({
 				var popupContent = '<h2>' + properties['Location'] + '</h2>';
 
 				if ('Address' in properties) {
-					popupContent += '<p>' + properies['Address'] + '</p>';
+					popupContent += '<p>' + properties['Address'] + '</p>';
 				}
 
 				if ('Image' in properties) {
