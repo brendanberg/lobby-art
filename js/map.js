@@ -15,10 +15,21 @@ $.ajax({
 
 		L.geoJson(geoData, {
 			style: function (feature) {
-				return {color: feature.properties.color};
+				return {color: feature.properties.marker-color};
 			},
 			onEachFeature: function (feature, layer) {
-				layer.bindPopup(feature.properties.description);
+				var properties = feature.properties;
+				var popupContent = '<h2>' + properties.Location + '</h2>' +
+					'<p>' + properies.Address + '</p>';
+
+				if ('Image' in properties) {
+					popupContent += '<img src="' + properties.Image + '">';
+				}
+
+				popupContent += '<p><strong>' + properties.Artist + '</strong><br>' +
+					'<em>' + properties.Title + '</em></p>';
+
+				layer.bindPopup(popupContent, {minWidth: 350});
 			}
 		}).addTo(map);
 
