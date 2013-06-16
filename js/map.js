@@ -1,5 +1,5 @@
-function b64_to_utf8( str ) {
-    return decodeURIComponent(window.atob( str ));
+function b64_to_utf8(str) {
+    return decodeURIComponent(window.atob(str));
 }
 
 var map = L.mapbox.map('map', 'brendanberg.map-3c5zsf9m').setView([40.738, -73.989], 13);
@@ -19,15 +19,18 @@ $.ajax({
 			},
 			onEachFeature: function (feature, layer) {
 				var properties = feature.properties;
-				var popupContent = '<h2>' + properties.Location + '</h2>' +
-					'<p>' + properies.Address + '</p>';
+				var popupContent = '<h2>' + properties['Location'] + '</h2>';
 
-				if ('Image' in properties) {
-					popupContent += '<img src="' + properties.Image + '">';
+				if ('Address' in properties) {
+					popupContent += '<p>' + properies['Address'] + '</p>';
 				}
 
-				popupContent += '<p><strong>' + properties.Artist + '</strong><br>' +
-					'<em>' + properties.Title + '</em></p>';
+				if ('Image' in properties) {
+					popupContent += '<img src="' + properties['Image'] + '">';
+				}
+
+				popupContent += '<p><strong>' + properties['Artist'] + '</strong><br>' +
+					'<em>' + properties['Title'] + '</em></p>';
 
 				layer.bindPopup(popupContent, {minWidth: 350});
 			}
