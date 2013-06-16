@@ -1,3 +1,7 @@
+function b64_to_utf8( str ) {
+    return decodeURIComponent(window.atob( str ));
+}
+
 var map = L.map('map');
 
 $.ajax({
@@ -7,8 +11,7 @@ $.ajax({
 	type: 'GET'
 }).then(
 	function(response, status, jqXHR) {
-		var geoData = atob(response['content']);
-		console.log(geoData);
+		var geoData = b64_to_utf8(response['content']);
 
 		L.geoJson(geoData, {
 			style: function (feature) {
