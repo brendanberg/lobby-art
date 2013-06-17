@@ -53,9 +53,13 @@ body {
 	width: 100px;
 	margin-bottom: 6px;
 	text-align: center;
-	font-size: 80%;
+	font-size: 10pt;
 	list-style: none;
 }
+.my-legend ul.legend-labels li img {
+	float:left;
+}
+
 .my-legend ul.legend-labels li span {
 	display: block;
 	float: left;

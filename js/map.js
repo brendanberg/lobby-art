@@ -56,7 +56,7 @@ $.ajax({
 				popupContent += '<p><strong>' + properties['Artist'] + '</strong><br>' +
 					'<em>' + properties['Title'] + '</em></p>';
 
-				layer.bindPopup(popupContent, {minWidth: 350});
+				layer.bindPopup(popupContent, {minWidth: 400});
 			}
 		}).addTo(map);
 
