@@ -30,6 +30,7 @@ Each location should include additional metadata in the properties dictionary.
       "type": "Feature",
       "geometry": {"type": "Point", "coordinates": [<LNG>, <LAT>]},
       "properties": {
+        "feature-type": "<FEATURE-TYPE>",
         "Location": "<BUILDING-NAME>",
         "Address": "<BUILDING-ADDRESS>",
         "Artist": "<ARTIST-NAME>",
@@ -40,5 +41,8 @@ Each location should include additional metadata in the properties dictionary.
 
 At a minimum, the metadata requires either a location or an address, the artist's name, and the title of the work.
 Additionally, the URL for a Creative-Commons licensed image may be included.
+
+The `feature-type` property determines the marker color in the map interface and is one of
+"private-lobby", "private-outdoor", "public-lobby", or "public-outdoor".
 
 To submit additional points of interest, fork the project, add data points, and submit a pull request.
