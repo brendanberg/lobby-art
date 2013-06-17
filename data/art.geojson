@@ -72,7 +72,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.008954, 40.707503]},
 				"properties": {
-					"marker-color": "#16a085",
+					"feature-type": "private-outdoor",
 					"Location": "Chase Manhattan Plaza",
 					"Artist": "Jean Dubuffet",
 					"Title": "Group of Four Trees",
