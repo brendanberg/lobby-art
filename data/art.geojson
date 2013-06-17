@@ -51,7 +51,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.00425349, 40.7155260]},
 				"properties": {
-					"marker-color": "#d35400",
+					"marker-color": "#e67e22",
 					"Location": "Jacob K. Javits Federal Building",
 					"Address": "26 Federal Plaza",
 					"Artist": "Sol LeWitt",
