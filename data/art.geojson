@@ -146,7 +146,7 @@
 		"features": [
 			{
 				"type": "Feature",
-				"geometry": {"type": "Point", "coordinates": [-74.009992, 40.752875]},
+				"geometry": {"type": "Point", "coordinates": [-74.008707, 40.752373]},
 				"properties": {
 					"marker-color": "#e67e22",
 					"Location": "Pier 66",
