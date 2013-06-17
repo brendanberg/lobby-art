@@ -7,7 +7,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.012127, 40.713351]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Location": "7 World Trade Center",
 					"Address": "250 Greenwich Street",
 					"Artist": "Jenny Holzer",
@@ -18,7 +18,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.011502, 40.713175]},
 				"properties": {
-					"marker-color": "#16a085",
+					"feature-type": "private-outdoor",
 					"Location": "Silverstein Family Park",
 					"Artist": "Jeff Koons",
 					"Title": "Balloon Flower (Red)"
@@ -51,7 +51,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.00425349, 40.7155260]},
 				"properties": {
-					"marker-color": "#c0392b",
+					"feature-type": "public-lobby",
 					"Location": "Jacob K. Javits Federal Building",
 					"Address": "26 Federal Plaza",
 					"Artist": "Sol LeWitt",
@@ -116,7 +116,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.003748, 40.712931]},
 				"properties": {
-					"marker-color": "#e67e22",
+					"feature-type": "public-outdoor",
 					"Location": "Manhattan Municipal Building",
 					"Address": "1 Centre Street",
 					"Artist": "Tony Rosenthal",
