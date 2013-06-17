@@ -24,15 +24,23 @@ body {
 }
 
 .leaflet-popup-content .title {
-	font-size: 20pt;
+	font-size: 18pt;
 }
 
 .my-legend .legend-title {
 	text-align: left;
 	margin-bottom: 8px;
-	font-weight: bold;
-	font-size: 90%;
+	font: 18pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+	font-weight: 100;
 }
+
+.my-legend .legend-description {
+	text-align: left;
+	margin-bottom: 8px;
+	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+	font-weight: 100;
+}
+
 .my-legend .legend-scale ul {
 	margin: 0;
 	padding: 0;
@@ -55,7 +63,7 @@ body {
 	width: 50px;
 }
 .my-legend .legend-source {
-	font-size: 70%;
+	font-size: 10pt;
 	color: #999;
 	clear: both;
 }
