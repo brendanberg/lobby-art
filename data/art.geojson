@@ -122,6 +122,16 @@
 					"Artist": "Tony Rosenthal",
 					"Title": "5 in 1"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.007932, 40.707628]},
+				"properties": {
+					"feature-type": "public-outdoor",
+					"Location": "Louise Nevelson Plaza",
+					"Artist": "Louise Nevelson",
+					"Title": "Shadows and Flags"
+				}
 			}
 		]
 	},
