@@ -51,7 +51,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.00425349, 40.7155260]},
 				"properties": {
-					"marker-color": "#e67e22",
+					"marker-color": "#c0392b",
 					"Location": "Jacob K. Javits Federal Building",
 					"Address": "26 Federal Plaza",
 					"Artist": "Sol LeWitt",
@@ -116,7 +116,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.003748, 40.712931]},
 				"properties": {
-					"marker-color": "#c0392b",
+					"marker-color": "#e67e22",
 					"Location": "Manhattan Municipal Building",
 					"Address": "1 Centre Street",
 					"Artist": "Tony Rosenthal",
