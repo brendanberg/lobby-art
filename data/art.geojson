@@ -143,7 +143,19 @@
 	{
 		"type": "FeatureCollection",
 		"name": "Chelsea",
-		"features": []
+		"features": [
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-74.009992, 40.752875]},
+				"properties": {
+					"marker-color": "#e67e22",
+					"Location": "Pier 66",
+					"Address": "West 26th Street",
+					"Artist": "Paul Ramirez Jonas",
+					"Title": "Long Time"
+				}
+			}
+		]
 	},
 	{
 		"type": "FeatureCollection",
