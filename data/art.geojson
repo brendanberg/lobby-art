@@ -28,7 +28,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.014444, 40.714722]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Location": "Goldman Sachs Building",
 					"Address": "200 West Street",
 					"Artist": "Julie Mehretu",
@@ -40,7 +40,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.008176, 40.706051]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Location": "Deutsche Bank Building",
 					"Address": "60 Wall Street",
 					"Artist": "John Baldessari",
@@ -62,7 +62,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.011191, 40.709288]},
 				"properties": {
-					"marker-color": "#16a085",
+					"feature-type": "private-outdoor",
 					"Location": "Zucotti Park",
 					"Artist": "Mark di Suvero",
 					"Title": "Joie de Vivre"
@@ -84,7 +84,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.010472, 40.70893]},
 				"properties": {
-					"marker-color": "#16a085",
+					"feature-type": "private-outdoor",
 					"Location": "Brown Brothers Harriman Building",
 					"Address": "140 Broadway",
 					"Artist": "Isamu Noguchi",
@@ -95,7 +95,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.004315, 40.707016]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Location": "One Seaport Plaza",
 					"Address": "199 Water Street",
 					"Artist": "Frank Stella",
@@ -106,7 +106,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.007298, 40.719257]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Address": "140 Franklin Street",
 					"Artist": "Sol LeWitt",
 					"Title": "Wall Drawing ???"
@@ -148,7 +148,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-74.008707, 40.752373]},
 				"properties": {
-					"marker-color": "#e67e22",
+					"feature-type": "public-outdoor",
 					"Location": "Pier 66",
 					"Address": "West 26th Street",
 					"Artist": "Paul Ramirez Jonas",
@@ -175,7 +175,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
 				"properties": {
-					"marker-color": "#16a085",
+					"feature-type": "private-outdoor",
 					"Location": "IBM Building",
 					"Address": "590 Madison Avenue",
 					"Artist": "Alexander Calder",
@@ -186,7 +186,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.980189, 40.753672]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Address": "505 Fifth Avenue",
 					"Artist": "James Turrell",
 					"Title": "Light Box"
@@ -196,7 +196,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.989016, 40.756019]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Location": "New York Times Building",
 					"Address": "242 W 41st Street",
 					"Artist": "Ben Rubin",
@@ -207,7 +207,7 @@
 				"type": "Feature",
 				"geometry": {"type": "Point", "coordinates": [-73.974498, 40.758785]},
 				"properties": {
-					"marker-color": "#2980b9",
+					"feature-type": "private-lobby",
 					"Address": "485 Madison Avenue",
 					"Developer": "Jack Resnick & Sons",
 					"Artist": "Henry Moore",
