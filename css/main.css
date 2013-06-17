@@ -1,4 +1,3 @@
-
 body {
 	margin: 0;
 	padding: 0;
@@ -50,14 +49,13 @@ body {
 .my-legend .legend-scale ul li {
 	display: block;
 	float: left;
-	width: 100px;
-	margin-bottom: 6px;
-	text-align: center;
+	width: 120px;
 	font-size: 10pt;
 	list-style: none;
 }
 .my-legend ul.legend-labels li img {
 	float:left;
+	margin-right: 8px;
 }
 
 .my-legend ul.legend-labels li span {
