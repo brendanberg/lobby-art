@@ -178,6 +178,18 @@
 					"Artist": "Ben Rubin",
 					"Title": "Movable Type"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-73.974498, 40.758785]},
+				"properties": {
+					"marker-color": "#2980b9",
+					"Address": "485 Madison Avenue",
+					"Developer": "Jack Resnick & Sons",
+					"Artist": "Henry Moore",
+					"Title": "Girl Seated Against Square Wall",
+					"Date": "1958"
+				}
 			}
 		]
 	}
