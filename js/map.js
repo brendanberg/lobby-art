@@ -4,7 +4,7 @@ function b64_to_utf8(str) {
 
 var map = L.mapbox.map('map', 'brendanberg.map-3c5zsf9m').setView([40.738, -73.989], 13);
 var markerStyle = {
-	'marker-size': 'medium',
+	'marker-size': 'small',
 	'marker-color': '#438fd3',
 	'marker-symbol': null
 };
