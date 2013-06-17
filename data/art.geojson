@@ -114,7 +114,7 @@
 			},
 			{
 				"type": "Feature",
-				"geometry": {"type": "Point", "coordinates": []},
+				"geometry": {"type": "Point", "coordinates": [-74.003748, 40.712931]},
 				"properties": {
 					"marker-color": "#c0392b",
 					"Location": "Manhattan Municipal Building",
