@@ -5,6 +5,13 @@ function b64_to_utf8(str) {
 var map = L.mapbox.map('map', 'brendanberg.map-3c5zsf9m').setView([40.738, -73.989], 13);
 map.legendControl.addLegend(document.getElementById('legend-content').innerHTML);
 
+var markerColors = {
+	'private-lobby': '#c0392b',
+	'private-outdoor': '#e67e22',
+	'public-lobby': '#2980b9',
+	'public-outdoor': '#16a085'
+};
+
 var markerStyle = {
 	'marker-size': 'small',
 	'marker-color': '#438fd3',
@@ -34,6 +41,9 @@ $.ajax({
 						} else {
 							styleProps[style] = markerStyle[style];
 						}
+					}
+					if ('feature-type' in properties) {
+						styleProps['marker-color'] = markerColors[properties['feature-type']];
 					}
 					layer.setIcon(L.mapbox.marker.icon(styleProps));
 				}
