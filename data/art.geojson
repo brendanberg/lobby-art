@@ -224,6 +224,18 @@
 					"Title": "Girl Seated Against Square Wall",
 					"Date": "1958"
 				}
+			},
+			{
+				"type": "Feature",
+				"geometry": {"type": "Point", "coordinates": [-73.983845, 40.756017]},
+				"properties": {
+					"feature-type": "private-lobby",
+					"Address": "1133 Avenue of The Americas",
+					"Developer": "Durst Organization",
+					"Artist": "Leo Villareal",
+					"Title": "Volume (Durst)",
+					"Date": 2013
+				}
 			}
 		]
 	}
