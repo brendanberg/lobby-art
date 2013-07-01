@@ -147,6 +147,16 @@
 		},
 		{
 			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": []},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Location": "Eleven Times Square",
+				"Artist": "Tim Prentice",
+				"Image": "http://images.huffingtonpost.com/2010-11-08-FXFOWLE_ElevenTimesSquareLobby_Detail_600.jpg"
+			}
+		},
+		{
+			"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
 			"properties": {
 				"feature-type": "private-outdoor",
