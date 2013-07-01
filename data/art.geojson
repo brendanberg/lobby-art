@@ -147,7 +147,7 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": []},
+			"geometry": {"type": "Point", "coordinates": [-73.9896, 40.7568]},
 			"properties": {
 				"feature-type": "private-lobby",
 				"Location": "Eleven Times Square",
