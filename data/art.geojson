@@ -11,7 +11,8 @@
 					"Location": "7 World Trade Center",
 					"Address": "250 Greenwich Street",
 					"Artist": "Jenny Holzer",
-					"Title": "For 7 World Trade"
+					"Title": "For 7 World Trade",
+					"Image": "http://s3.amazonaws.com/media.lobbyart.org/ecf33876-6da5-4877-bdf0-8386c966be3e.jpg"
 				}
 			},
 			{
@@ -21,7 +22,8 @@
 					"feature-type": "private-outdoor",
 					"Location": "Silverstein Family Park",
 					"Artist": "Jeff Koons",
-					"Title": "Balloon Flower (Red)"
+					"Title": "Balloon Flower (Red)",
+					"Image": "http://s3.amazonaws.com/media.lobbyart.org/36bb7647-571f-4abf-a6ca-77aef14893b1.jpg"
 				}
 			},
 			{
