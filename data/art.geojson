@@ -157,7 +157,7 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-73...., 40....]},
+			"geometry": {"type": "Point", "coordinates": [-73.968166, 40.761801]},
 			"properties": {
 				"feature-type": "private-lobby",
 				"Location": "Bloomberg Tower",
@@ -169,11 +169,11 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-73...., 40....]},
+			"geometry": {"type": "Point", "coordinates": [-73.967514, 40.761333]},
 			"properties": {
 				"feature-type": "private-lobby",
 				"Location": "Bloomberg Tower",
-				"Address": "151 E 58th St",
+				"Address": "151 E 58th Street",
 				"Artist": "Ursula von Rydingsvard",
 				"Title": "Berwici Pici Pa",
 				"Year": "2005
