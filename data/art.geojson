@@ -157,6 +157,30 @@
 		},
 		{
 			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-73...., 40....]},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Location": "Bloomberg Tower",
+				"Address": "731 Lexington Avenue",
+				"Artist": "El Anatsui",
+				"Title": "Bukpa Layout",
+				"Year": "2012"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-73...., 40....]},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Location": "Bloomberg Tower",
+				"Address": "151 E 58th St",
+				"Artist": "Ursula von Rydingsvard",
+				"Title": "Berwici Pici Pa",
+				"Year": "2005
+			}
+		},
+		{
+			"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
 			"properties": {
 				"feature-type": "private-outdoor",
