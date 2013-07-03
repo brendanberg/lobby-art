@@ -181,6 +181,16 @@
 		},
 		{
 			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-73.970766, 40.757498]},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Address": "599 Lexington Avenue",
+				"Artist": "Frank Stella",
+				"Title": "Salto nel Mio Sacco"
+			}
+		},
+		{
+			"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-73.972669, 40.762149]},
 			"properties": {
 				"feature-type": "private-outdoor",
