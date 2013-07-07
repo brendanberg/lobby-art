@@ -18,6 +18,8 @@ var markerStyle = {
 	'marker-symbol': null
 };
 
+var template = {"type":"Template","expressionList":[{"type":"Literal","string":"<p>"},{"type":"Block","name":{"type":"Name","name":"if"},"expression":{"type":"Expression","searchPath":[{"type":"Name","name":"Location"}]},"consequent":{"type":"Template","expressionList":[{"type":"Literal","string":"<span class=\"title\">"},{"type":"Expression","searchPath":[{"type":"Name","name":"Location"}]},{"type":"Literal","string":"</span>"},{"type":"Block","name":{"type":"Name","name":"if"},"expression":{"type":"Expression","searchPath":[{"type":"Name","name":"Address"}]},"consequent":{"type":"Template","expressionList":[{"type":"Literal","string":"<br>"},{"type":"Expression","searchPath":[{"type":"Name","name":"Address"}]}]}}]},"alternative":{"type":"Template","expressionList":[{"type":"Literal","string":""},{"type":"Block","name":{"type":"Name","name":"if"},"expression":{"type":"Expression","searchPath":[{"type":"Name","name":"Address"}]},"consequent":{"type":"Template","expressionList":[{"type":"Literal","string":"<span class=\"title\">"},{"type":"Expression","searchPath":[{"type":"Name","name":"Address"}]},{"type":"Literal","string":"</span>"}]}}]}},{"type":"Literal","string":"</p>"},{"type":"Block","name":{"type":"Name","name":"if"},"expression":{"type":"Expression","searchPath":[{"type":"Name","name":"Image"}]},"consequent":{"type":"Template","expressionList":[{"type":"Literal","string":"<img src=\""},{"type":"Expression","searchPath":[{"type":"Name","name":"Image"}]},{"type":"Literal","string":"\" width=\"100%\">"}]}},{"type":"Literal","string":"<p><strong>"},{"type":"Expression","searchPath":[{"type":"Name","name":"Artist"}]},{"type":"Literal","string":"</strong<br><em>"},{"type":"Expression","searchPath":[{"type":"Name","name":"Title"}]},{"type":"Literal","string":"</em></p>"}]};
+
 $.ajax({
 	url: 'https://api.github.com/repos/brendanberg/lobby-art/contents/data/art.geojson?ref=master',
 	dataType: 'json',
@@ -32,7 +34,7 @@ $.ajax({
 				return {color: feature.properties['marker-color']};
 			},
 			onEachFeature: function (feature, layer) {
-				var properties = feature.properties, popupContent, style, styleProps = {};
+				var properties = feature.properties, popupTemplate, style, styleProps = {};
 
 				if (layer instanceof L.Marker) {
 					for (style in markerStyle) {
@@ -48,25 +50,8 @@ $.ajax({
 					layer.setIcon(L.mapbox.marker.icon(styleProps));
 				}
 
-				// TODO: Use a template for this and pull additional metadata into a table
-				// to be displayed in a 'More Info' tab.
-
-				if ('Location' in properties && 'Address' in properties) {
-					popupContent = '<p><span class="title">' + properties['Location'] + '</span><br>' + properties['Address'] + '</p>';
-				} else if ('Location' in properties) {
-					popupContent = '<p><span class="title">' + properties['Location'] + '</span></p>';
-				} else if ('Address' in properties) {
-					popupContent = '<p><span class="title">' + properties['Address'] + '</span></p>';
-				}
-
-				if ('Image' in properties) {
-					popupContent += '<img src="' + properties['Image'] + '" width="100%">';
-				}
-
-				popupContent += '<p><strong>' + properties['Artist'] + '</strong><br>' +
-					'<em>' + properties['Title'] + '</em></p>';
-
-				layer.bindPopup(popupContent, {minWidth: 400});
+				popupTemplate = Strudel.load(template);
+				layer.bindPopup(popupTemplate(properties), {minWidth: 400});
 			}
 		}).addTo(map);
 
