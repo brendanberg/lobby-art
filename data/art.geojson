@@ -105,16 +105,6 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.007298, 40.719257]},
-			"properties": {
-				"feature-type": "private-lobby",
-				"Address": "140 Franklin Street",
-				"Artist": "Sol LeWitt",
-				"Title": "Wall Drawing ???"
-			}
-		},
-		{
-			"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-74.003748, 40.712931]},
 			"properties": {
 				"feature-type": "public-outdoor",
