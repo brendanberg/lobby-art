@@ -26,6 +26,13 @@ body {
 	font-size: 18pt;
 }
 
+.leaflet-popup-content .image {
+	width: 100%;
+	height: 250px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .my-legend .legend-title {
 	text-align: left;
 	margin-bottom: 8px;
