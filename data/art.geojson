@@ -50,17 +50,6 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.00425349, 40.7155260]},
-			"properties": {
-				"feature-type": "public-lobby",
-				"Location": "Jacob K. Javits Federal Building",
-				"Address": "26 Federal Plaza",
-				"Artist": "Sol LeWitt",
-				"Title": "Wall Drawing 746"
-			}
-		},
-		{
-			"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-74.011191, 40.709288]},
 			"properties": {
 				"feature-type": "private-outdoor",
@@ -101,38 +90,6 @@
 				"Address": "199 Water Street",
 				"Artist": "Frank Stella",
 				"Title": "Sinjerli I, Basra Gate II, and Damascus Gate II"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.003748, 40.712931]},
-			"properties": {
-				"feature-type": "public-outdoor",
-				"Location": "Manhattan Municipal Building",
-				"Address": "1 Centre Street",
-				"Artist": "Tony Rosenthal",
-				"Title": "5 in 1"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.007932, 40.707628]},
-			"properties": {
-				"feature-type": "public-outdoor",
-				"Location": "Louise Nevelson Plaza",
-				"Artist": "Louise Nevelson",
-				"Title": "Shadows and Flags"
-			}
-		},
-		{
-			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-74.008707, 40.752373]},
-			"properties": {
-				"feature-type": "public-outdoor",
-				"Location": "Pier 66",
-				"Address": "West 26th Street",
-				"Artist": "Paul Ramirez Jonas",
-				"Title": "Long Time"
 			}
 		},
 		{
