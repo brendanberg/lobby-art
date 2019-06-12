@@ -16,18 +16,34 @@
 		<div id="map"></div>
 		<div id="legend-content" class="legend">
 			<div class="my-legend">
-			<div class="legend-title">Museum of Lobby Art</div>
-			<div class="legend-description">Artwork Categories</div>
-			<div class="legend-scale">
-				<ul class="legend-labels">
-					<li><img src="http://a.tiles.mapbox.com/v3/marker/pin-s+c0392b.png">Private Lobby</li>
-					<li><img src="http://a.tiles.mapbox.com/v3/marker/pin-s+e67e22.png">Private Plaza</li>
-					<li><img src="http://a.tiles.mapbox.com/v3/marker/pin-s+2980b9.png">Public Lobby</li>
-					<li><img src="http://a.tiles.mapbox.com/v3/marker/pin-s+16a085.png">Public Plaza</li>
-				</ul>
+				<h1><img src="assets/mola_sm.png" srcset="assets/mola_sm@2x.png 2x" style="height: 18pt;"> Museum of Lobby Art</h1>
 			</div>
-			<div class="legend-source"><a href="https://github.com/brendanberg/lobby-art">Open Data and More Information</a></div>
+			<button class="violet" id="categories">Marker Categories</button>
+			<div class="my-legend" id="legend-categories">
+				<input type="checkbox" id="private-lobby-ck" class="marker" checked><label for="private-lobby-ck">Private Lobby</label>
+				<input type="checkbox" id="private-plaza-ck" class="marker" checked><label for="private-plaza-ck">Private Plaza</label>
+				<input type="checkbox" id="public-lobby-ck" class="marker" checked><label for="public-lobby-ck">Public Lobby</label>
+				<input type="checkbox" id="public-plaza-ck" class="marker" checked><label for="public-plaza-ck">Public Plaza</label>
 			</div>
+			<button class="blue" id="about">About</button>
+			<div class="my-legend hidden" id="legend-about">
+				<p>The <strong>Museum of Lobby Art</strong> documents and catalogs paintings,
+					sculptures, and installations in corporate lobbies and
+					plazas around New York City.</p>
+				<p>The privately-owned works in this catalog are in uneasy
+					conversation with the public. These works are often behind
+					turnstiles or otherwise barricaded from public access.
+					Passers-by may be able to glimpse works through windows or
+					behind guard desks but will rarely be permitted to view
+					works up close. The Museum of Lobby Art draws attention to
+					these partially-accessible works by documenting their
+					existence.</p>
+				<p>Because we believe in open access to cultural heritage, the
+					raw data behind this website is available on the
+					<a href="https://github.com/brendanberg/lobby-art">museum's
+					GitHub page</a>.</p>
+			</div>
+		</div>
 		</div>
 		<script src="js/map.js" type="application/javascript"></script>
 	</body>

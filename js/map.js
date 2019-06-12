@@ -1,24 +1,47 @@
-
 mapboxgl.accessToken =
 	'pk.eyJ1IjoiYnJlbmRhbmJlcmciLCJhIjoiWXVvZHV6VSJ9.6wcfcCqUfRnFd2EUT_9QGw';
+
 const map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/brendanberg/cikk9vbhw003hsykput8wm6ry',
 	center: [-73.989, 40.738],
 	zoom: 13,
-});
-
-const nav = new mapboxgl.NavigationControl({
-	showCompass: false,
-	showZoom: true,
-});
-
-map.addControl(nav, 'top-left');
+	logoPosition: 'top-left',
+	attributionControl: false,
+})
+	.addControl(
+		new mapboxgl.AttributionControl({
+			compact: true,
+		}),
+		'top-right'
+	);
+	/*.addControl(
+		new mapboxgl.NavigationControl({
+			showCompass: false,
+			showZoom: true,
+		}),
+		'top-left'
+	);*/
 
 /*
 map.legendControl.addLegend(
 	document.getElementById('legend-content').innerHTML
 );*/
+let categoryButton = document.getElementById('categories');
+let aboutButton = document.getElementById('about');
+
+let categoryPane = document.getElementById('legend-categories');
+let aboutPane = document.getElementById('legend-about');
+
+categoryButton.addEventListener('click', (e) => {
+	aboutPane.classList.add('hidden');
+	categoryPane.classList.toggle('hidden');
+});
+
+aboutButton.addEventListener('click', (e) => {
+	categoryPane.classList.add('hidden');
+	aboutPane.classList.toggle('hidden');
+});
 
 const markerColors = {
 	'private-lobby': '#c0392b',
@@ -114,34 +137,50 @@ const template = {
 };
 
 map.on('load', () => {
+	categoryPane.classList.add('hidden');
+
 	map.addSource('works', {
 		type: 'geojson',
 		data:
 			'https://raw.githubusercontent.com/brendanberg/lobby-art/master/data/art.geojson',
 	});
 
-	map.loadImage('http://a.tiles.mapbox.com/v3/marker/pin-s+c0392b.png', (error, image) => {
-		map.addImage('private-lobby', image);
-	});
-	map.loadImage('http://a.tiles.mapbox.com/v3/marker/pin-s+e67e22.png', (error, image) => {
-		map.addImage('private-outdoor', image);
-	});
-	map.loadImage('http://a.tiles.mapbox.com/v3/marker/pin-s+2980b9.png', (error, image) => {
-		map.addImage('public-lobby', image);
-	});
-	map.loadImage('http://a.tiles.mapbox.com/v3/marker/pin-s+16a085.png', (error, image) => {
-		map.addImage('public-outdoor', image);
-	});
+	map.loadImage(
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+c0392b.png',
+		(error, image) => {
+			map.addImage('private-lobby', image);
+		}
+	);
+	map.loadImage(
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+e67e22.png',
+		(error, image) => {
+			map.addImage('private-outdoor', image);
+		}
+	);
+	map.loadImage(
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+2980b9.png',
+		(error, image) => {
+			map.addImage('public-lobby', image);
+		}
+	);
+	map.loadImage(
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+16a085.png',
+		(error, image) => {
+			map.addImage('public-outdoor', image);
+		}
+	);
 
 	map.addLayer({
 		id: 'markers',
 		type: 'symbol',
 		source: 'works',
-		layout: {'icon-image': '{feature-type}'}
+		layout: {'icon-image': '{feature-type}'},
 	});
 
 	map.on('click', (e) => {
-		let features = map.queryRenderedFeatures(e.point, {layers: ['markers']});
+		let features = map.queryRenderedFeatures(e.point, {
+			layers: ['markers'],
+		});
 
 		if (!features.length) {
 			return;
@@ -162,38 +201,9 @@ map.on('load', () => {
 	});
 
 	map.on('mousemove', (e) => {
-		let features = map.queryRenderedFeatures(e.point, {layers: ['markers']});
+		let features = map.queryRenderedFeatures(e.point, {
+			layers: ['markers'],
+		});
 		map.getCanvas().style.cursor = features.length ? 'pointer' : '';
 	});
 });
-/*
-	L.geoJson(geoData, {
-		style: function(feature) {
-			return {color: feature.properties['marker-color']};
-		},
-		onEachFeature: function(feature, layer) {
-			var properties = feature.properties,
-				popupTemplate,
-				style,
-				styleProps = {};
-
-			if (layer instanceof L.Marker) {
-				for (style in markerStyle) {
-					if (style in properties) {
-						styleProps[style] = properties[style];
-					} else {
-						styleProps[style] = markerStyle[style];
-					}
-				}
-				if ('feature-type' in properties) {
-					styleProps['marker-color'] =
-						markerColors[properties['feature-type']];
-				}
-				layer.setIcon(L.mapbox.marker.icon(styleProps));
-			}
-
-			popupTemplate = Strudel.load(template);
-			layer.bindPopup(popupTemplate(properties), {minWidth: 400});
-		},
-	}).addTo(map);
-});*/
