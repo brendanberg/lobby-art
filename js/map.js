@@ -207,34 +207,3 @@ map.on('load', () => {
 		map.getCanvas().style.cursor = features.length ? 'pointer' : '';
 	});
 });
-/*
-	L.geoJson(geoData, {
-		style: function(feature) {
-			return {color: feature.properties['marker-color']};
-		},
-		onEachFeature: function(feature, layer) {
-			var properties = feature.properties,
-				popupTemplate,
-				style,
-				styleProps = {};
-
-			if (layer instanceof L.Marker) {
-				for (style in markerStyle) {
-					if (style in properties) {
-						styleProps[style] = properties[style];
-					} else {
-						styleProps[style] = markerStyle[style];
-					}
-				}
-				if ('feature-type' in properties) {
-					styleProps['marker-color'] =
-						markerColors[properties['feature-type']];
-				}
-				layer.setIcon(L.mapbox.marker.icon(styleProps));
-			}
-
-			popupTemplate = Strudel.load(template);
-			layer.bindPopup(popupTemplate(properties), {minWidth: 400});
-		},
-	}).addTo(map);
-});*/
