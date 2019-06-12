@@ -1,21 +1,13 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #map {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-}
-
-#nav {
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	background-color: #FFF;
-	font-family: Helvetica, Arial, sans-serif;
-	padding: 20px;
 }
 
 .mapboxgl-popup-content {
@@ -48,52 +40,131 @@ body {
 }
 
 .legend {
-
+	background-color: #FFF;
+	bottom: 0;
+	right: 0;
+	width: 500px;
+	padding-top: 0;
+	position: absolute;
+	z-index: 1;
+	box-shadow: 0px 0px 20px #444 !important;
 }
 
-.my-legend .legend-title {
-	text-align: left;
-	margin-bottom: 8px;
-	font: 18pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+@media only screen and (max-width: 600px) {
+	.legend {
+		width: 100%;
+	}
+}
+
+.legend h1 {
+	font: 14pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
 	font-weight: 100;
-}
-
-.my-legend .legend-description {
-	text-align: left;
-	margin-bottom: 8px;
-	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
-	font-weight: 100;
-}
-
-.my-legend .legend-scale ul {
+	color: #555;
 	margin: 0;
-	padding: 0;
-	float: left;
-	list-style: none;
-}
-.my-legend .legend-scale ul li {
-	display: block;
-	float: left;
-	width: 120px;
-	font-size: 10pt;
-	list-style: none;
-}
-.my-legend ul.legend-labels li img {
-	float:left;
-	margin-right: 8px;
 }
 
-.my-legend ul.legend-labels li span {
+.legend p {
+	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+	line-height: 16pt;
+}
+
+.legend div {
+	transition: all 0.5s;
+	overflow: hidden;
+	height: auto;
+	max-height: 600px;
+	padding: 10pt;
+	margin: 0;
+}
+
+.legend div.hidden {
+	padding-top: 0;
+	padding-bottom: 0;
+	max-height: 0;
+}
+
+.legend button {
+	width: 100%;
+	padding: 10pt;
+	border: 0;
+	margin: 0;
+	text-align: left;
+	font: 14pt Helvetica, Arial, sans-serif;
+	transition: color 0.2s;
+}
+
+.legend button:hover {
+	color: #555;
+}
+
+.blue {
+	background: rgb(84,173,203);
+	background: linear-gradient(45deg, rgba(84,173,203,1) 0%, rgba(140,168,225,1) 100%);
+	color: #EEE;
+}
+
+.violet {
+	background: rgb(136,168,224);
+	background: linear-gradient(45deg, rgba(136,168,224,1) 0%, rgba(193,92,248,1) 100%);
+	color: #EEE;
+}
+
+.green {
+	background-color: #71C598;
+	color: #EEE;
+}
+
+.legend a {
+	box-shadow: inset 0 -2pt 0 #a9cbff;
+	-moz-box-shadow: inset 0 -2pt 0 #a9cbff;
+	-opera-box-shadow: inset 0 -2pt 0 #a9cbff;
+	-webkit-box-shadow: inset 0 -2pt 0 #a9cbff;
+}
+
+.legend a:hover {
+	background-color: #a9cbff;
+}
+
+.legend a:active {
+	box-shadow: inset 0 -2pt 0 #ccadff;
+	-moz-box-shadow: inset 0 -2pt 0 #ccadff;
+	-opera-box-shadow: inset 0 -2pt 0 #ccadff;
+	-webkit-box-shadow: inset 0 -2pt 0 #ccadff;
+	background-color: #ccadff !important;
+}
+
+.legend a, .legend a:hover, .legend a:visited, .legend a:active {
+	color: #639cef;
+	outline: 0;
+	text-decoration: none;
+}
+
+.legend input[type=checkbox].marker {
+	display: none;
+}
+
+.legend input[type=checkbox].marker + label {
 	display: block;
-	float: left;
-	height: 15px;
-	width: 50px;
+	height: 50px;
+	padding-left: 40px;
+	margin-bottom: -10px;
+	vertical-align: middle;
+	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+	background-image: url(https://a.tiles.mapbox.com/v3/marker/pin-s+d5d5d5.png);
+	background-position: left center;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
 }
-.my-legend .legend-source {
-	font-size: 10pt;
-	color: #999;
-	clear: both;
+
+.legend input[type=checkbox]#private-lobby-ck:checked + label {
+	background-image: url(https://a.tiles.mapbox.com/v3/marker/pin-s+c0392b.png);
 }
-.my-legend a {
-	color: #777;
+.legend input[type=checkbox]#private-plaza-ck:checked + label {
+	background-image: url(https://a.tiles.mapbox.com/v3/marker/pin-s+e67e22.png);
+}
+.legend input[type=checkbox]#public-lobby-ck:checked + label {
+	background-image: url(https://a.tiles.mapbox.com/v3/marker/pin-s+2980b9.png);
+}
+.legend input[type=checkbox]#public-plaza-ck:checked + label {
+	background-image: url(https://a.tiles.mapbox.com/v3/marker/pin-s+16a085.png);
 }
