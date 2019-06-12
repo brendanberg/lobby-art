@@ -18,19 +18,37 @@ body {
 	padding: 20px;
 }
 
-.leaflet-popup-content {
+.mapboxgl-popup-content {
 	font: 12pt "HelveticaNeue-Light";
+	width: 500px;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0px 0px 20px #444 !important;
 }
 
-.leaflet-popup-content .title {
+.mapboxgl-popup-content > p {
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+.mapboxgl-popup-content > p ~ p {
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.mapboxgl-popup-content .title {
 	font-size: 18pt;
 }
 
-.leaflet-popup-content .image {
+.mapboxgl-popup-content .image {
 	width: 100%;
 	height: 250px;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.legend {
+
 }
 
 .my-legend .legend-title {
@@ -79,5 +97,3 @@ body {
 .my-legend a {
 	color: #777;
 }
-
-
