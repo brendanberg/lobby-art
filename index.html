@@ -5,19 +5,16 @@
 		<title>Museum of Lobby Art</title>
 		<meta name="viewport" content="width=device-width">
 
-				<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.3/mapbox.css' rel='stylesheet' />
-		<!--[if lte IE 8]>
-			<link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.3/mapbox.ie.css' rel='stylesheet' />
-		<![endif]-->
-		<script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.3/mapbox.js'></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="application/javascript"></script>
 		<script src="//s3.amazonaws.com/media.lobbyart.org/strudel.min.js" type="application/javascript"></script>
 	</head>
 	<body>
 		<div id="map"></div>
-		<div id="legend-content" style="display: none;">
+		<div id="legend-content" class="legend">
 			<div class="my-legend">
 			<div class="legend-title">Museum of Lobby Art</div>
 			<div class="legend-description">Artwork Categories</div>
@@ -35,4 +32,3 @@
 		<script src="js/map.js" type="application/javascript"></script>
 	</body>
 </html>
-
