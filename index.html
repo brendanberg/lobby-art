@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Museum of Lobby Art</title>
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="MoLA">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
@@ -14,22 +18,26 @@
 	</head>
 	<body>
 		<div id="map"></div>
-		<div id="legend-content" class="legend">
-			<div class="my-legend">
-				<h1><img src="assets/mola_sm.png" srcset="assets/mola_sm@2x.png 2x" style="height: 18pt;"> Museum of Lobby Art</h1>
+		<div id="legend-content" class="legend open">
+			<div class="my-legend" id="logo-region">
+				<table><tr><td class="logo">
+					<img src="assets/mola_sm.png" srcset="assets/mola_sm@2x.png 2x" style="height: 18pt;"> Museum of Lobby Art
+				</td><td style="text-align: right;">
+					<span class="menu-icon" id="menu-control"></span>
+				</td></tr></table>
 			</div>
-			<button class="violet" id="categories">Marker Categories</button>
-			<div class="my-legend" id="legend-categories">
-				<input type="checkbox" id="private-lobby-ck" class="marker" checked><label for="private-lobby-ck">Private Lobby</label>
-				<input type="checkbox" id="private-plaza-ck" class="marker" checked><label for="private-plaza-ck">Private Plaza</label>
-				<input type="checkbox" id="public-lobby-ck" class="marker" checked><label for="public-lobby-ck">Public Lobby</label>
-				<input type="checkbox" id="public-plaza-ck" class="marker" checked><label for="public-plaza-ck">Public Plaza</label>
+			<button class="violet" id="categories">Collection Filters</button>
+			<div class="my-legend hidden" id="legend-categories">
+				<input type="checkbox" id="private-lobby-ck" class="marker" data-layer-name="private-lobby" checked><label for="private-lobby-ck">Private Lobby</label>
+				<input type="checkbox" id="private-plaza-ck" class="marker" data-layer-name="private-outdoor" checked><label for="private-plaza-ck">Private Plaza</label>
+				<!--<input type="checkbox" id="public-lobby-ck" class="marker" checked><label for="public-lobby-ck">Public Lobby</label>
+				<input type="checkbox" id="public-plaza-ck" class="marker" checked><label for="public-plaza-ck">Public Plaza</label>-->
 			</div>
-			<button class="blue" id="about">About</button>
+			<button class="blue" id="about">About the Museum</button>
 			<div class="my-legend hidden" id="legend-about">
-				<p>The <strong>Museum of Lobby Art</strong> documents and catalogs paintings,
-					sculptures, and installations in corporate lobbies and
-					plazas around New York City.</p>
+				<p>The <strong>Museum of Lobby Art</strong> documents and
+					catalogs paintings, sculptures, and installations in
+					corporate lobbies and plazas throughout New York City.</p>
 				<p>The privately-owned works in this catalog are in uneasy
 					conversation with the public. These works are often behind
 					turnstiles or otherwise barricaded from public access.
@@ -39,9 +47,21 @@
 					these partially-accessible works by documenting their
 					existence.</p>
 				<p>Because we believe in open access to cultural heritage, the
-					raw data behind this website is available on the
-					<a href="https://github.com/brendanberg/lobby-art">museum's
-					GitHub page</a>.</p>
+					source code and raw data behind this website is available
+					on <a href="https://github.com/brendanberg/lobby-art">the
+					museum's GitHub page</a>.</p>
+			</div>
+			<button class="green" id="submit">Suggest an Artwork</button>
+			<div class="my-legend hidden" id="legend-submit">
+				<p>Are we missing your favorite painting? Do you walk past a
+					masterpiece on your way to the office every day? Tell us
+					about it and improve the collection.</p>
+				<form name="tip-line">
+					<input type="text" placeholder="Building Address">
+					<input type="text" placeholder="Artist&rsquo;s Name">
+					<input type="text" placeholder="Title of Work">
+					<input type="submit" value="Submit" disabled>
+				</form>
 			</div>
 		</div>
 		</div>

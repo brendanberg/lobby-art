@@ -39,6 +39,10 @@ body {
 	background-repeat: no-repeat;
 }
 
+.mapboxgl-popup-close-button {
+	font-size: 18pt;
+}
+
 .legend {
 	background-color: #FFF;
 	bottom: 0;
@@ -46,29 +50,116 @@ body {
 	width: 500px;
 	padding-top: 0;
 	position: absolute;
-	z-index: 1;
+	z-index: 1337;
 	box-shadow: 0px 0px 20px #444 !important;
+}
+
+.legend table {
+	width: 100%;
+}
+
+.legend table,
+.legend tr,
+.legend td {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.legend td {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.legend td.logo {
+	width: 100%;
+	max-width: 0;
+	text-overflow: ellipsis;
+	font: 14pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	color: #555;
+	margin: 0;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-opera-user-select: none;
+	cursor: default;
+}
+
+.legend span.menu-icon {
+	height: 20pt;
+	width: 20pt;
+	float: right;
+}
+
+.legend.open span.menu-icon {
+	background: url(../assets/close.svg);
+}
+
+.legend.closed span.menu-icon {
+	background: url(../assets/menu.svg);
 }
 
 @media only screen and (max-width: 600px) {
 	.legend {
 		width: 100%;
 	}
+
+	.legend div {
+		max-height: 300px !important;
+		overflow-y: scroll !important;
+	}
+
+	.legend div.hidden {
+		max-height: 0 !important;
+	}
+
+	.mapboxgl-popup-content {
+		border-radius: 0 !important;
+	}
+
+	.mapboxgl-popup-content {
+		width: 100% !important;
+	}
+
+	.mapboxgl-popup {
+		transform:none !important;
+		z-index: 1138 !important;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+	}
+
+	.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-center .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
+	.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip{
+		display:none !important;
+	}
 }
 
 .legend h1 {
-	font: 14pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
-	font-weight: 100;
-	color: #555;
-	margin: 0;
 }
 
 .legend p {
 	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
 	line-height: 16pt;
+	margin-top: 0;
+}
+
+.legend p + p {
+	margin-top: 1em;
+	margin-bottom: 0;
 }
 
 .legend div {
+	-webkit-overflow-scrolling: touch;
 	transition: all 0.5s;
 	overflow: hidden;
 	height: auto;
@@ -77,24 +168,40 @@ body {
 	margin: 0;
 }
 
+.legend button.hidden,
 .legend div.hidden {
 	padding-top: 0;
 	padding-bottom: 0;
 	max-height: 0;
+	margin: 0;
 }
 
 .legend button {
+	display: block;
+	transition-duration: 0.5s;
+	transition-property: color, max-height, padding-top, padding-bottom;
+	max-height: 50px;
 	width: 100%;
-	padding: 10pt;
+	padding: 10pt 10pt;
 	border: 0;
 	margin: 0;
 	text-align: left;
 	font: 14pt Helvetica, Arial, sans-serif;
-	transition: color 0.2s;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-opera-user-select: none;
+	cursor: default;
 }
 
 .legend button:hover {
-	color: #555;
+	color: #FFF;
+}
+
+.violet {
+	background: rgb(140,168,225);
+	background: linear-gradient(45deg, rgba(140,168,225,1) 0%, rgba(196,113,227,1) 100%);
+	color: #EEE;
 }
 
 .blue {
@@ -103,14 +210,9 @@ body {
 	color: #EEE;
 }
 
-.violet {
-	background: rgb(136,168,224);
-	background: linear-gradient(45deg, rgba(136,168,224,1) 0%, rgba(193,92,248,1) 100%);
-	color: #EEE;
-}
-
 .green {
-	background-color: #71C598;
+	background-color: rgb(113,197,152);
+	background: linear-gradient(45deg, rgba(113,197,152,1) 0%, rgba(84,173,203,1) 100%);
 	color: #EEE;
 }
 
@@ -139,20 +241,63 @@ body {
 	text-decoration: none;
 }
 
+.legend input[type=text] {
+	width: 100%;
+	height: 20pt;
+	margin: 5pt 0;
+	border-radius: 0;
+	border: 0;
+	border-bottom: 1pt solid #BBB;
+	padding-bottom: 1pt;
+	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
+}
+
+.legend input[type=text]:focus {
+	outline: none;
+	padding-bottom: 0;
+	border-bottom: 2pt solid #989bf7;
+}
+
+.legend input[type=submit] {
+	width: 100%;
+	margin: 5pt 0;
+	padding: 5pt;
+	border-radius: 0;
+	font: 14pt Helvetica, Arial, sans-serif;
+	text-align: left;
+	color: #989bf7;
+	background-color: #FFF;
+	border: 2pt solid #989bf7;
+}
+
+.legend input[type=submit]:disabled {
+	color: #BBB;
+	border: 2pt solid #DDD;
+}
+
+.legend input[type=submit]:disabled:hover {
+	background-color: #FFF;
+}
+
+.legend input[type=submit]:hover {
+	background-color: #e9edff;
+}
+
 .legend input[type=checkbox].marker {
 	display: none;
 }
 
 .legend input[type=checkbox].marker + label {
-	display: block;
+	display: inline-block;
 	height: 50px;
-	padding-left: 40px;
+	padding-left: 30px;
+	width: 40%;
 	margin-bottom: -10px;
 	vertical-align: middle;
 	font: 12pt "HelveticaNeue-Light", Arial, Helvetica, sans-serif;
 	background-image: url(https://a.tiles.mapbox.com/v3/marker/pin-s+d5d5d5.png);
 	background-position: left center;
-	background-size: auto 100%;
+	background-size: auto;
 	background-repeat: no-repeat;
 }
 
