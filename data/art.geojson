@@ -154,6 +154,7 @@
 			"properties": {
 				"feature-type": "private-lobby",
 				"Address": "505 Fifth Avenue",
+				"Developer": "Stawski Partners",
 				"Artist": "James Turrell",
 				"Title": "Light Box"
 			}
@@ -215,6 +216,31 @@
 				"Artist": "Keith Haring",
 				"Title": "Self Portrait",
 				"Date": 1989
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-73.9836431, 40.7614448]},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Location": "AXA Equitable Center",
+				"Address": "787 Seventh Avenue",
+				"Artist": "Roy Lichtenstein",
+				"Title": "Mural with Blue Brushstroke",
+				"Date": 1986
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-74.0130815, 40.7123068]},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Location": "One World Trade Center",
+				"Address": "1 World Trade Center",
+				"Developer": "Durst Organization",
+				"Artist": "José Parlá",
+				"Title": "Union of the Senses",
+				"Date": 2014
 			}
 		}
 	]
