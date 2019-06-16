@@ -209,7 +209,7 @@
 			"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-73.9904997, 40.7299597]},
 			"properties": {
-				"feature-type": "private-plaza",
+				"feature-type": "private-outdoor",
 				"Address": "101 Astor Place",
 				"Developer": "Minskoff Equities",
 				"Artist": "Keith Haring",
