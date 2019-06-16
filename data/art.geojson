@@ -195,7 +195,7 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-73.9908056, 40.7301092]},
+			"geometry": {"type": "Point", "coordinates": [-73.990431, 40.730144]},
 			"properties": {
 				"feature-type": "private-lobby",
 				"Address": "51 Astor Place",
@@ -207,7 +207,7 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-73.9904997, 40.7299597]},
+			"geometry": {"type": "Point", "coordinates": [-73.9900018, 40.729943]},
 			"properties": {
 				"feature-type": "private-outdoor",
 				"Address": "101 Astor Place",
