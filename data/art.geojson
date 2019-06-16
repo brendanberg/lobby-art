@@ -192,6 +192,30 @@
 				"Title": "Volume (Durst)",
 				"Date": 2013
 			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-73.9908056, 40.7301092]},
+			"properties": {
+				"feature-type": "private-lobby",
+				"Address": "51 Astor Place",
+				"Developer": "Minskoff Equities",
+				"Artist": "Jeff Koons",
+				"Title": "Balloon Rabbit (Red)",
+				"Date": 2014
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-73.9904997, 40.7299597]},
+			"properties": {
+				"feature-type": "private-plaza",
+				"Address": "101 Astor Place",
+				"Developer": "Minskoff Equities",
+				"Artist": "Keith Haring",
+				"Title": "Self Portrait",
+				"Date": 1989
+			}
 		}
 	]
 }
