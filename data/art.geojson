@@ -207,7 +207,7 @@
 		},
 		{
 			"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [-73.9900018, 40.729943]},
+			"geometry": {"type": "Point", "coordinates": [-73.989966, 40.729721]},
 			"properties": {
 				"feature-type": "private-outdoor",
 				"Address": "101 Astor Place",
