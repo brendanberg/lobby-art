@@ -25,6 +25,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 		<!--<link rel="stylesheet" href="css/normalize.css">-->
+		<link rel="stylesheet" href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.3.0/mapbox-gl-geocoder.css' type='text/css' />
 		<link rel="stylesheet" href="css/main.css">
 		<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
@@ -32,6 +33,7 @@
 		<script src="//s3.amazonaws.com/media.lobbyart.org/strudel.min.js" type="application/javascript"></script>
 	</head>
 	<body>
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.3.0/mapbox-gl-geocoder.min.js'></script>
 		<div id="map"></div>
 		<div id="legend-content" class="legend open">
 			<div class="my-legend" id="logo-region">
@@ -72,9 +74,13 @@
 					masterpiece on your way to the office every day? Tell us
 					about it and improve the collection.</p>
 				<form name="tip-line">
-					<input type="text" placeholder="Building Address">
-					<input type="text" placeholder="Artist&rsquo;s Name">
-					<input type="text" placeholder="Title of Work">
+					<!--<input type="text" placeholder="Building Address">-->
+					<div id="geocoder" class="geocoder"></div>
+					<input type="hidden" name="Address">
+					<input type="text" name="Artist" placeholder="Artist&rsquo;s Name">
+					<input type="text" name="Title" placeholder="Title of Work">
+					<input type="number" name="Year" pattern="\d*" min="1800" max="2019" step="1" placeholder="Year">
+					<input type="file" id="image" accept="image/*" capture><label for="image">Choose a Photo</label>
 					<input type="submit" value="Submit" disabled>
 				</form>
 			</div>

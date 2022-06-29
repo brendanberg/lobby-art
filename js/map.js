@@ -39,6 +39,15 @@ if (isMobile) {
 	);
 }
 
+var geocoder = new MapboxGeocoder({
+	accessToken: mapboxgl.accessToken,
+	mapboxgl: mapboxgl,
+	placeholder: "Address",
+	
+});
+
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
 let categoryButton = document.getElementById('categories');
 let aboutButton = document.getElementById('about');
 let submitFormButton = document.getElementById('submit');
@@ -47,7 +56,6 @@ let categoryPane = document.getElementById('legend-categories');
 let aboutPane = document.getElementById('legend-about');
 let submitFormPane = document.getElementById('legend-submit');
 
-let menuButton = document.getElementById('menu-control');
 let menuContainer = document.getElementById('legend-content');
 let logoRegion = document.getElementById('logo-region');
 
@@ -69,28 +77,21 @@ submitFormButton.addEventListener('click', (e) => {
 	submitFormPane.classList.toggle('hidden');
 });
 
+const collapseMenu = () => {
+	categoryButton.classList.add('hidden');
+	categoryPane.classList.add('hidden');
+	aboutPane.classList.add('hidden');
+	aboutButton.classList.add('hidden');
+	submitFormPane.classList.add('hidden');
+	submitFormButton.classList.add('hidden');
+
+	menuContainer.classList.remove('open');
+	menuContainer.classList.add('closed');
+};
+
 logoRegion.addEventListener('click', (e) => {
-	if (menuContainer.classList.contains('closed')) {
-		categoryButton.classList.remove('hidden');
-		aboutButton.classList.remove('hidden');
-		submitFormButton.classList.remove('hidden');
-
-		menuContainer.classList.remove('closed');
-		menuContainer.classList.add('open');
-	}
-});
-
-menuButton.addEventListener('click', (e) => {
 	if (menuContainer.classList.contains('open')) {
-		categoryButton.classList.add('hidden');
-		categoryPane.classList.add('hidden');
-		aboutPane.classList.add('hidden');
-		aboutButton.classList.add('hidden');
-		submitFormPane.classList.add('hidden');
-		submitFormButton.classList.add('hidden');
-
-		menuContainer.classList.remove('open');
-		menuContainer.classList.add('closed');
+		collapseMenu();
 	} else {
 		categoryButton.classList.remove('hidden');
 		aboutButton.classList.remove('hidden');
@@ -99,7 +100,6 @@ menuButton.addEventListener('click', (e) => {
 		menuContainer.classList.remove('closed');
 		menuContainer.classList.add('open');
 	}
-	e.stopPropagation();
 });
 
 const markerColors = {
@@ -255,6 +255,8 @@ map.on('load', () => {
 
 	// Show popup cards when markers are clicked
 	map.on('click', (e) => {
+		collapseMenu();
+
 		let features = map.queryRenderedFeatures(e.point, {
 			layers: ['private-lobby', 'private-outdoor'],
 		});
@@ -283,6 +285,14 @@ map.on('load', () => {
 			layers: ['private-lobby', 'private-outdoor'],
 		});
 		map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+	});
+/*
+	let userMoved = false;
+*/
+	['movestart', 'zoomstart', 'boxzoomstart', 'rotatestart', 'pitchstart'].forEach((action) => {
+		map.on(action, (e) => {
+			collapseMenu();
+		});
 	});
 
 	// Select layer filter checkboxes and connect layer visibility changes
