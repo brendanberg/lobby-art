@@ -213,25 +213,25 @@ map.on('load', () => {
 
 	// Load marker images
 	map.loadImage(
-		'https://a.tiles.mapbox.com/v3/marker/pin-s+c0392b.png',
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+c0392b.png?access_token=' + mapboxgl.accessToken,
 		(error, image) => {
 			map.addImage('private-lobby', image);
 		}
 	);
 	map.loadImage(
-		'https://a.tiles.mapbox.com/v3/marker/pin-s+e67e22.png',
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+e67e22.png?access_token=' + mapboxgl.accessToken,
 		(error, image) => {
 			map.addImage('private-outdoor', image);
 		}
 	);
 	map.loadImage(
-		'https://a.tiles.mapbox.com/v3/marker/pin-s+2980b9.png',
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+2980b9.png?access_token=' + mapboxgl.accessToken,
 		(error, image) => {
 			map.addImage('public-lobby', image);
 		}
 	);
 	map.loadImage(
-		'https://a.tiles.mapbox.com/v3/marker/pin-s+16a085.png',
+		'https://a.tiles.mapbox.com/v3/marker/pin-s+16a085.png?access_token=' + mapboxgl.accessToken,
 		(error, image) => {
 			map.addImage('public-outdoor', image);
 		}
